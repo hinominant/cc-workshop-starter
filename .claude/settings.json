@@ -1,0 +1,73 @@
+{
+  "$schema": "https://code.claude.com/settings.schema.json",
+  "_comment": "ワークショップ安全設定（DCP準拠）。参加者の安全を守るための設定。",
+  "_tiers": "deny=Tier1(絶対禁止・ブロック), ask=Tier3(確認必須・アラート), allow=Tier4(通常操作・自動許可)",
+
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run build:*)"
+    ],
+    "ask": [
+      "Write",
+      "Edit",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npm install:*)",
+      "Bash(docker:*)",
+      "Bash(rm:*)",
+      "Bash(rm -r:*)",
+      "Bash(rm -rf:*)",
+      "Bash(rm -fr:*)",
+      "Bash(rmdir:*)",
+      "Bash(unlink:*)",
+      "Bash(find * -delete*)",
+      "Bash(rsync * --delete*)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(su:*)",
+      "Bash(shred:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(git push)",
+      "Bash(git push:*)",
+      "Bash(git push --force:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -f:*)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(.secrets/**)",
+      "Read(credentials/**)",
+      "Write(.env)",
+      "Write(.env.*)",
+      "Write(.secrets/**)",
+      "Write(credentials/**)",
+      "Edit(.env)",
+      "Edit(.env.*)",
+      "Edit(.secrets/**)",
+      "Edit(credentials/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/.git-credentials)",
+      "Read(~/.config/gh/**)",
+      "Edit(~/.zshrc)",
+      "Write(~/.zshrc)",
+      "Edit(~/.bashrc)",
+      "Write(~/.bashrc)",
+      "WebFetch"
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": false
+  }
+}
