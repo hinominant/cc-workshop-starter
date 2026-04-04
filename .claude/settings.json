@@ -1,8 +1,7 @@
 {
   "$schema": "https://code.claude.com/settings.schema.json",
-  "_comment": "ワークショップ安全設定（DCP準拠）。参加者の安全を守るための設定。",
-  "_tiers": "deny=Tier1(絶対禁止・ブロック), ask=Tier3(確認必須・アラート), allow=Tier4(通常操作・自動許可)",
-
+  "_comment": "\u30ef\u30fc\u30af\u30b7\u30e7\u30c3\u30d7\u5b89\u5168\u8a2d\u5b9a\uff08DCP\u6e96\u62e0\uff09\u3002\u53c2\u52a0\u8005\u306e\u5b89\u5168\u3092\u5b88\u308b\u305f\u3081\u306e\u8a2d\u5b9a\u3002",
+  "_tiers": "deny=Tier1(\u7d76\u5bfe\u7981\u6b62\u30fb\u30d6\u30ed\u30c3\u30af), ask=Tier3(\u78ba\u8a8d\u5fc5\u9808\u30fb\u30a2\u30e9\u30fc\u30c8), allow=Tier4(\u901a\u5e38\u64cd\u4f5c\u30fb\u81ea\u52d5\u8a31\u53ef)",
   "permissions": {
     "allow": [
       "Read",
